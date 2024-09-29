@@ -2,10 +2,15 @@ import memojiImage from "@/assets/images/memoji-computer.png"
 import Image from "next/image";
 import ArrowDown from "@/assets/icons/arrow-down.svg";
 import grainImage from "@/assets/images/grain.jpg";
+import StarIcon from "@/assets/icons/star.svg";
+import SparkleIcon from "@/assets/icons/sparkle.svg";
+import { MovingStars } from "@/components/MovingStars";
+
 
 export const HeroSection = () => {
   return (
-    <div className="py-32 md:py-48 lg:py-60 relative z-0">
+    <div className="py-32 sm:py-26 md:py-48 lg:py-60 relative z-0 overflow-x-clip">
+      <div className="absolute inset-0 [mask-image:linear-gradient(to_bottom, transparent, black_10%, black_70%,transparent)]">
       <div className="absolute inset-0 -z-30 opacity-5" style={{
         backgroundImage: `url(${grainImage.src})`
       }}></div>
@@ -13,6 +18,29 @@ export const HeroSection = () => {
       <div className="size-[820px] hero-ring"></div>
       <div className="size-[1020px] hero-ring"></div>
       <div className="size-[1220px] hero-ring"></div>
+      
+        <MovingStars size={800} rotation={-72}>
+          <StarIcon className="size-28 text-emerald-300" />
+        </MovingStars>
+        <MovingStars size={550} rotation={20}>
+          <StarIcon className="size-12 text-emerald-300" />
+        </MovingStars>
+        <MovingStars size={590} rotation={98}>
+          <StarIcon className="size-8 text-emerald-300" />
+        </MovingStars>
+        <MovingStars size={430} rotation={-13}>
+          <SparkleIcon className="size-8 text-emerald-300/20" />
+        </MovingStars>
+        <MovingStars size={430} rotation={68}>
+          <SparkleIcon className="size-8 text-emerald-300/20" />
+        </MovingStars>
+        <MovingStars size={530} rotation={170}>
+          <SparkleIcon className="size-10 text-emerald-300/20" />
+        </MovingStars>
+        <MovingStars size={710} rotation={130}>
+          <SparkleIcon className="size-14 text-emerald-300/20" />
+        </MovingStars>
+      </div>
        <div className="container">
         <div className="flex flex-col items-center">
         <Image
