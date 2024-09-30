@@ -1,13 +1,16 @@
-import memojiImage from "@/assets/images/memoji-computer.png"
-import Image from "next/image";
+"use client";
+import { TypeAnimation } from "react-type-animation";
 import ArrowDown from "@/assets/icons/arrow-down.svg";
 import grainImage from "@/assets/images/grain.jpg";
 import StarIcon from "@/assets/icons/star.svg";
 import SparkleIcon from "@/assets/icons/sparkle.svg";
 import { MovingStars } from "@/components/MovingStars";
+import { useState } from "react";
+
 
 
 export const HeroSection = () => {
+  const [textColor, setTextColor] = useState('bg-green-500');
   return (
     <div className="py-32 sm:py-26 md:py-48 lg:py-60 relative z-0 overflow-x-clip">
       <div className="absolute inset-0 [mask-image:linear-gradient(to_bottom, transparent, black_10%, black_70%,transparent)]">
@@ -43,14 +46,25 @@ export const HeroSection = () => {
       </div>
        <div className="container">
         <div className="flex flex-col items-center">
-        <Image
-          src={memojiImage}
-          className="size-[100px]"
-          alt="meme" 
-        />
+       
+      <TypeAnimation 
+        sequence={[
+          'Titas Ramancauskas',
+          1000,
+          'Full Stack Developer',
+          1000,
+          '.NET, JavaScript/TypeScript Developer',
+          1000,
+        ]}
+        speed={50}
+        deletionSpeed={90}
+        style={{ fontSize: '3em', font: "font-sans" }}
+        repeat={Infinity}>
+        
+      </TypeAnimation>
         <div className="bg-gray-950 border border-gray-800 px-4 py-1.5 inline-flex items-center gap-4 rounded-lg">
           <div className="bg-green-500 size-2.5 rounded-full"></div>
-          <div className="text-sm font-medium">Available for new projects</div>
+          <div className="text-sm font-medium">Available for new challenges</div>
         </div>
         </div>
         <div className="max-w-lg mx-auto">
@@ -65,8 +79,8 @@ export const HeroSection = () => {
             <ArrowDown className="size-4"/>
            </button>
            <button className="inline-flex items-center gap-2 border border-white bg-white text-gray-900 h-12 px-6 rounded-xl">
-            <span>✅</span>
-            <span className="font-semibold">Let&apos;s Connect</span>
+            <span className="font-semibold">Send Message</span>
+            <span>ᯓ➤</span>
            </button>
         </div>
       </div>

@@ -1,46 +1,45 @@
-import darkSaasLandingPage from "@/assets/images/dark-saas-landing-page.png";
-import lightSaasLandingPage from "@/assets/images/light-saas-landing-page.png";
-import aiStartupLandingPage from "@/assets/images/ai-startup-landing-page.png";
+import RediAI from "@/assets/images/RediAI.png";
+import BudiAI from "@/assets/images/BudiAi.png";
+import EnglishReady from "@/assets/images/EnglishReady.png";
 import Image from "next/image";
 import ArrowUpRightIcon from '@/assets/icons/arrow-up-right.svg';
 import grainImage from "@/assets/images/grain.jpg";
 
 const portfolioProjects = [
   {
-    company: "Acme Corp",
-    year: "2022",
-    title: "Dark Saas Landing Page",
+    company: "RediAI",
+    year: "2024-Present",
+    title: "RediAI: English Learning Agent",
     results: [
-      { title: "Enhanced user experience by 40%" },
-      { title: "Improved site speed by 50%" },
-      { title: "Increased mobile traffic by 35%" },
+      { title: "40% reduction in response times through efficient data retrieval" },
+      { title: "100+ users gained through Reddit demostrations" },
+      { title: "WebAPI Architecture C#/.NET, JavaScript front-end" },
     ],
     link: "https://youtu.be/4k7IdSLxh6w",
-    image: darkSaasLandingPage,
+    image: RediAI,
   },
   {
-    company: "Innovative Co",
-    year: "2021",
-    title: "Light Saas Landing Page",
+    company: "Budi",
+    year: "2024-Present",
+    title: "Budi: AI Personal Shopper",
     results: [
-      { title: "Boosted sales by 20%" },
-      { title: "Expanded customer reach by 35%" },
-      { title: "Increased brand awareness by 15%" },
+      { title: "Launched Flutter landing, generating interest from 9,000+ followers" },
+      { title: "97% exact matchs and 85% similar alternatives for outfit generator" },
     ],
     link: "https://youtu.be/7hi5zwO75yc",
-    image: lightSaasLandingPage,
+    image: BudiAI,
   },
   {
-    company: "Quantum Dynamics",
-    year: "2023",
-    title: "AI Startup Landing Page",
+    company: "English Ready V1.0",
+    year: "2023-2024",
+    title: "English Ready V1.0: English Dictation",
     results: [
-      { title: "Enhanced user experience by 40%" },
-      { title: "Improved site speed by 50%" },
+      { title: "95% accurary of word matching through dictation" },
+      { title: "Restful Web API developed enabling speech analysis" },
       { title: "Increased mobile traffic by 35%" },
     ],
     link: "https://youtu.be/Z7I5uSRHMHg",
-    image: aiStartupLandingPage,
+    image: EnglishReady,
   },
 ];
 
@@ -52,7 +51,7 @@ export const ProjectsSection = () => {
           <p className="uppecase font-semibold tracking-widest bg-gradient-to-r from-emerald-300 to-sky-400 text-center bg-clip-text text-transparent">My Portofolio</p>
         </div>
         <h2 className="font-serif text-4xl text-center mt-6">Projects</h2>
-        <p className="text-center md:text-lg lg:text-xl text-white/60 mt-4 max-w-md mx-auto"> seee how wahasdwd a</p>
+        <p className="text-center md:text-lg lg:text-xl text-white/60 mt-4 max-w-md mx-auto">Watch how I go from Idea to Code to Productヅ</p>
         <div className="flex flex-col md:mt-20 mt-10 gap-20">
           {portfolioProjects.map(project => (
             <div key={project.title} className="bg-gray-800 rounded-3xl relative z-0 overflow-hidden after:z-10 after:content-[''] after:absolute after:inset-0 after:outline-2 after:outline after:-outline-offset-2 after:rounded-3xl after:outline-white/20 px-8 pt-8 md:pt-12 md:px-10 lg:pt-16 lg:px-20 after:pointer-events-none">
@@ -83,7 +82,8 @@ export const ProjectsSection = () => {
               </a>
               </div>
               <div className="relative">
-              <Image src={project.image} alt={project.title} className="mt-8 -mb-4 md:-mb-0 lg:mt-0 lg:absolute lg:h-full lg:w-auto lg:max-w-none"/>
+              <Image src={project.image} alt={project.title} className="mt-8 -mb-12 md:-mb-16 lg:mt-0 lg:absolute lg:h-full lg:w-auto lg: ml-7 lg:max-w-none transition-transform duration-300 hover:scale-105 hover:shadow-xl hover:shadow-emerald-500/50 hover:border-4 hover:border-emerald-500 rounded-3xl"
+              />
               </div>
               </div>
             </div>
