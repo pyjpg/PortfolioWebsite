@@ -54,6 +54,7 @@ const ExperienceCard = ({ experience }) => {
   return (
     
     <VerticalTimelineElement
+      
       visible={true}
       contentStyle={{
         background:'#2F4F4F',
@@ -72,7 +73,7 @@ const ExperienceCard = ({ experience }) => {
         </div>
       }
     >
-      <div>
+      <div className="">
         <h3 className='text-white text-[24px] font-bold'>{experience.title}</h3>
         <p
           className='text-secondary text-[16px] font-semibold'
@@ -110,8 +111,8 @@ export const Experience = () => {
         <h2 className="font-serif text-4xl text-center mt-6">Previous Employment</h2>
     </div>
 
-      <div className='mt-20 flex flex-col'>
-        <VerticalTimeline>
+      <div className='mt-20 flex flex-col '>
+        <VerticalTimeline >
           {experiences.map((experience, index) => (
             <ExperienceCard
               key={index} // Use index instead of experience directly
