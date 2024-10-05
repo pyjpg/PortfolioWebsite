@@ -6,21 +6,24 @@ import StarIcon from "@/assets/icons/star.svg";
 import SparkleIcon from "@/assets/icons/sparkle.svg";
 import { MovingStars } from "@/components/MovingStars";
 import { useState } from "react";
+import Link from 'next/link';
 
 
 
 export const HeroSection = () => {
   const [textColor, setTextColor] = useState('bg-green-500');
   return (
-    <div className="py-32 sm:py-26 md:py-48 lg:py-60 relative z-0 overflow-x-clip">
-      <div className="absolute inset-0 [mask-image:linear-gradient(to_bottom, transparent, black_10%, black_70%,transparent)]">
+    <div id="home" className="py-32 sm:py-26 md:py-48 lg:py-60 relative z-0 overflow-x-clip">
+     <div className="absolute inset-0 z-999 hero-mask">
       <div className="absolute inset-0 -z-30 opacity-5" style={{
         backgroundImage: `url(${grainImage.src})`
       }}></div>
-      <div className="size-[620px] hero-ring"></div>
-      <div className="size-[820px] hero-ring"></div>
-      <div className="size-[1020px] hero-ring"></div>
-      <div className="size-[1220px] hero-ring"></div>
+      <div className="hero-mask bg-gray-800">
+        <div className="size-[620px] hero-ring"></div>
+        <div className="size-[820px] hero-ring"></div>
+        <div className="size-[1020px] hero-ring"></div>
+        <div className="size-[1220px] hero-ring"></div>
+      </div>
       
         <MovingStars size={430} rotation={-13} spin spinDuration="30s" orbit orbitDuration="4s">
           <SparkleIcon className="size-8 text-emerald-300/20" />
@@ -34,13 +37,22 @@ export const HeroSection = () => {
         <MovingStars size={550} rotation={20} spin spinDuration="38s" orbit orbitDuration="5s">
           <StarIcon className="size-12 text-emerald-300" />
         </MovingStars>
+        <MovingStars size={550} rotation={-160} spin spinDuration="48s" orbit orbitDuration="4s">
+          <StarIcon className="size-28 text-emerald-300" />
+        </MovingStars>
         <MovingStars size={590} rotation={98} spin spinDuration="40s" orbit orbitDuration="5s">
           <StarIcon className="size-8 text-emerald-300" />
         </MovingStars>
-        <MovingStars size={710} rotation={130} spin spinDuration="42s" orbit orbitDuration="6s">
+        <MovingStars size={610} rotation={-22} spin spinDuration="48s" orbit orbitDuration="8s">
+          <StarIcon className="size-28 text-emerald-300" />
+        </MovingStars>
+        <MovingStars size={660} rotation={-52} spin spinDuration="48s" orbit orbitDuration="4s">
+          <StarIcon className="size-28 text-emerald-300" />
+        </MovingStars>
+        <MovingStars size={710} rotation={130} spin spinDuration="42s" orbit orbitDuration="3s">
           <SparkleIcon className="size-14 text-emerald-300/20" />
         </MovingStars>
-        <MovingStars size={800} rotation={-72} spin spinDuration="48s" orbit orbitDuration="6s">
+        <MovingStars size={800} rotation={-132} spin spinDuration="48s" orbit orbitDuration="6s">
           <StarIcon className="size-28 text-emerald-300" />
         </MovingStars>
       </div>
@@ -53,7 +65,7 @@ export const HeroSection = () => {
           1000,
           'Full Stack Developer',
           1000,
-          '.NET, C#, JavaScript/TypeScript Developer',
+          '.NET, C#, TypeScript',
           1000,
         ]}
         speed={50}
@@ -70,23 +82,38 @@ export const HeroSection = () => {
         </div>
         </div>
         <div className="max-w-lg mx-auto">
-          <h1 className="font-serif text-3xl text-center mt-8 md:text-5xl">Building Exceptional User Experience</h1>
+          <h1 className="font-serif text-3xl text-center mt-8 md:text-5xl">Delivering & Developing Quality Solutions</h1>
           <p className="mt-4 text-center text-white/60 md:text-lg">
-            I specialise in transforming designs into functional, high-performing web applications. Let&apos; discuss your next project.
+            Well-engineered, strong systems and products are my area of expertise
           </p>
         </div>
-        <div className="flex flex-col md:flex-row justify-center items-center mt-8 gap-4">
-           <button className="inline-flex items-center gap-2 border border-white/15 px-6 h-12 rounded-xl">
-            <span className="font-semibold ">Explore my Work</span>
-            <ArrowDown className="size-4 animate-bounce"/>
-           </button>
-           <button className="inline-flex items-center gap-2 border border-white bg-white text-gray-900 h-12 px-6 rounded-xl">
-            <span className="font-semibold ">Send Message</span>
-            <span className="animate-pulse">ᯓ➤</span>
-           </button>
+        <div className="flex flex-col md:flex-row justify-center items-center mt-8 gap-4 relative z-999 ">
+          <Link href="#projects" passHref>
+            <button className="inline-flex items-center gap-2 border border-white/15 px-6 h-12 rounded-xl hover:bg-green-600 hover:border-green-500" >
+              <span className="font-semibold ">Explore my Work</span>
+              <ArrowDown className="size-4 animate-bounce"/>
+            </button>
+           </Link>
+           <a href="mailto:titas.r@outlook.com">
+            <button className="inline-flex items-center gap-2 border border-white bg-white text-gray-900 h-12 px-6 rounded-xl hover:bg-green-500 hover:border-green-500">
+              <span className="font-semibold ">Send Message</span>
+              <span className="animate-pulse">ᯓ➤</span>
+            </button>
+           </a>
         </div>
       </div>
     </div>
+
+    
    
   )
 };
+
+<style jsx>{`
+  .hero-mask {
+    mask-image: linear-gradient(to bottom, transparent, rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.7), transparent);
+    -webkit-mask-image: linear-gradient(to bottom, transparent, rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.7), transparent);
+    mask-size: cover;
+    -webkit-mask-size: cover;
+  }
+`}</style>

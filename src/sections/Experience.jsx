@@ -8,7 +8,8 @@ import Uplogo from "@/assets/images/UpworkLogo.png";
 import CGIlogo from "@/assets/images/cgi.jpg";
 import 'react-vertical-timeline-component/style.min.css';
 import grainImage from "@/assets/images/grain.jpg";
-
+import { textVariant } from "@/components/motion";
+ 
 
 // Updated experiences array
 const experiences = [
@@ -54,7 +55,6 @@ const ExperienceCard = ({ experience }) => {
   return (
     
     <VerticalTimelineElement
-      
       visible={true}
       contentStyle={{
         background:'#2F4F4F',
@@ -104,23 +104,23 @@ export const Experience = () => {
   return (
     <>
     <div className="absolute inset-0 -z-10 opacity-5" style={{ backgroundImage: `url(${grainImage.src})`,}}></div>
-    <div className="container">
+    <div id="experience" className="container">
         <div className="flex justify-center">
-          <p className="uppecase font-semibold tracking-widest bg-gradient-to-r from-emerald-300 to-sky-400 text-center bg-clip-text text-transparent">Work History</p>
+          <p className="uppecase font-semibold tracking-widest bg-gradient-to-r from-emerald-300 to-sky-400 text-center bg-clip-text text-transparent text-2xl">Work History</p>
         </div>
-        <h2 className="font-serif text-4xl text-center mt-6">Previous Employment</h2>
+        <h2 className="font-serif text-6xl text-center mt-6">Previous Employment</h2>
     </div>
 
-      <div className='mt-20 flex flex-col '>
+      <motion.div variants={textVariant()} className='mt-20 flex flex-col '>
         <VerticalTimeline >
           {experiences.map((experience, index) => (
             <ExperienceCard
-              key={index} // Use index instead of experience directly
+              key={index} 
               experience={experience}
             />
           ))}
         </VerticalTimeline>
-      </div>
+      </motion.div>
     </>
   );
 };
