@@ -28,7 +28,7 @@ export const ContactSection = () => {
                   <span className="animate-pulse text-2xl">👋</span>                  
                 </button>
               </a>
-              <a href="/TitasRamanCV.pdf" download>
+              <a href="https://www.dropbox.com/scl/fi/xp7rrln3mu9txndpzkmn4/TitasRamanCv.pdf?rlkey=uoa6mddqn05d98zwk92qrqtvv&st=3sik2zzs&dl=0" download>
                 <button className="text-gray-900 inline-flex items-center px-6 h-12 rounded-xl gap-2 w-max border border-white bg-white  hover:bg-green-500 hover:border-green-500">
                   <span className="font-semibold">Download CV</span>
                   <span className="animate-bounce text-xl">📥</span>

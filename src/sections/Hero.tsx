@@ -58,22 +58,29 @@ export const HeroSection = () => {
       </div>
        <div className="container">
         <div className="flex flex-col items-center">
-       
-      <TypeAnimation 
-        sequence={[
-          'Titas Ramancauskas',
-          1000,
-          'Full Stack Developer',
-          1000,
-          '.NET, C#, TypeScript',
-          1000,
-        ]}
-        speed={50}
-        deletionSpeed={90}
-        style={{ fontSize: '3em', font: "font-sans" }}
-        repeat={Infinity}>
-        
+       <div className="md:text-sm">
+        <TypeAnimation
+          sequence={[
+            'Titas Ramancauskas',
+            1000,
+            'Full Stack Developer',
+            1000,
+            '.NET, C#, TypeScript',
+            1000,
+          ]}
+          speed={50}
+          deletionSpeed={90}
+          style={{
+            height: '300px',
+            width: '700px',
+            fontSize: '2em',
+            font: 'font-sans',
+          }}
+          repeat={Infinity}
+        >
       </TypeAnimation>
+       </div>
+      
         <div className="bg-gray-950 border border-gray-800 px-4 py-1.5 inline-flex items-center gap-4 rounded-lg">
           <div className="bg-green-500/80 size-2.5 rounded-full relative">
             <div className="bg-green-500 size-2.5 rounded-full animate-ping-large"></div>

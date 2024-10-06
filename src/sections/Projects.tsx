@@ -15,7 +15,7 @@ const portfolioProjects = [
       { title: "100+ users gained through Reddit demostrations" },
       { title: "WebAPI Architecture C#/.NET, JavaScript front-end" },
     ],
-    link: "https://github.com/pyjpg/English-ReadyAPI",
+    link: "https://github.com/pyjpg",
     image: RediAI,
   },
   {
@@ -38,7 +38,7 @@ const portfolioProjects = [
       { title: "Restful Web API developed enabling speech analysis" },
       { title: "Increased mobile traffic by 35%" },
     ],
-    link: "https://github.com/pyjpg/EnglishReadyUI",
+    link: "https://github.com/pyjpg",
     image: EnglishReady,
   },
 ];
@@ -78,7 +78,7 @@ export const ProjectsSection = () => {
                 ))}
               </ul>
               <a href={project.link}>
-                <button className="bg-white text-gray-950 h-12 w-full rounded-xl font-semibold inline-flex items-center justify-center gap-2 mt-8 md:w-auto px-6">
+                <button className="bg-white text-gray-950 h-12 w-full rounded-xl font-semibold inline-flex items-center justify-center gap-2 mt-8 md:w-auto px-6 hover:bg-green-500 hover:border-green-500">
                   <span>View Github/Site</span>
                   <ArrowUpRightIcon className="size-4"/>
                   </button>
